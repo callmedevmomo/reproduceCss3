@@ -1,3 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,600,700&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans", cursive;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.phone-container {
+  cursor: pointer;
+  margin-top: 50px;
+  background-color: #f7f7f7;
+  width: 350px;
+  height: 700px;
+  border-radius: 40px;
+  box-shadow: inset -6px -6px 15px rgba(145, 160, 180, 0.45),
+    30px 30px 40px rgba(118, 146, 180, 0.18);
+  overflow: hidden;
+  padding: 50px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.header i {
+  font-size: 16px;
+  opacity: 0.6;
+}
+.header h2 {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-container .top-text:first-child {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.text-container .top-text:last-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff6b81;
+}
+
+.cooking {
+  width: 100%;
+}
+.cooking .cooking-photos {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+.cooking .cooking-photo {
+  width: 140px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Acme", cursive;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f5f6fa;
+}
+
+.cooking-photo:nth-child(1) {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgb(241, 242, 246, 0.5) 95%
+    ),
+    url("https://images.unsplash.com/photo-1523039031846-6b3f39302cb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1850&q=80");
+  background-size: cover;
+}
+
+.cooking-photo:nth-child(2) {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgb(241, 242, 246, 0.5) 95%
+    ),
+    url("https://images.unsplash.com/photo-1541780509360-54c0e068c099?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80");
+  background-size: contain;
+}
+.cooking-photo:nth-child(3) {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgb(241, 242, 246, 0.5) 95%
+    ),
+    url("https://images.unsplash.com/photo-1550461716-dbf266b2a8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-size: cover;
+}
+
+.cooking-photo:nth-child(4) {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgb(241, 242, 246, 0.5) 95%
+    ),
+    url("https://images.unsplash.com/photo-1507120366498-4656eaece7fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80");
+  background-size: cover;
+  font-size: 14px;
+}
+
+.cooking .bottom-recipes {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.cooking-links {
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cooking-link {
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.cooking-link:not(:last-child) {
+  margin-bottom: 10px;
+}
+.cooking .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 10px;
+}
+.cooking .text-container .top {
+  opacity: 0.8;
+  font-weight: 700;
+}
+.cooking .text-container .bottom {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.cooking .icon-container {
+  font-size: 16px;
+  color: #ff6b81;
+  margin-right: 10px;
+}
+
+.nav-bar {
+  position: absolute;
+  left: 10px;
+  width: 347px;
+  height: 70px;
+  background-color: white;
+  border-radius: 0px 0px 45px 45px;
+  bottom: 130px;
+  box-shadow: inset -6px -6px 15px rgba(145, 160, 180, 0.45),
+    30px 30px 40px rgba(118, 146, 180, 0.18);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: rotateX(0.5turn);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(1turn);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(2turn);
+  }
+}
+
+.nav-list .nav-icon i {
+  font-size: 20px;
+}
+.nav-list .nav-icon:nth-child(2) {
+  color: #ff7979;
+}
+.nav-list .nav-icon:not(:nth-child(2)) {
+  opacity: 0.5;
 }
